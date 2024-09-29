@@ -6,7 +6,7 @@
 #    By: anarama <anarama@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/29 15:38:54 by anarama           #+#    #+#              #
-#    Updated: 2024/09/29 15:41:27 by anarama          ###   ########.fr        #
+#    Updated: 2024/09/29 16:43:01 by anarama          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,7 @@ OBJDIR	:= obj
 HEADERS	:=	Zombie.hpp
 
 SRC		:=	main.cpp \
-			randomChump.cpp \
-			Zombie.cpp \
-			newZombie.cpp
+			Zombie.cpp
 
 OBJ		:= $(SRC:%.cpp=$(OBJDIR)/%.o)
 
