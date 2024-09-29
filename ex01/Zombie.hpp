@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/29 15:42:09 by anarama           #+#    #+#             */
-/*   Updated: 2024/09/29 19:30:16 by anarama          ###   ########.fr       */
+/*   Created: 2024/09/29 17:10:44 by anarama           #+#    #+#             */
+/*   Updated: 2024/09/29 19:30:30 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class Zombie {
 		void announce( void );
 };
 
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );
+Zombie* zombieHorde( int N, std::string name );
 
 #endif // ZOMBIE_HPP

@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/29 15:40:01 by anarama           #+#    #+#             */
-/*   Updated: 2024/09/29 19:30:04 by anarama          ###   ########.fr       */
+/*   Created: 2024/09/29 18:57:04 by anarama           #+#    #+#             */
+/*   Updated: 2024/09/29 19:40:32 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-Zombie::Zombie() : _name(DEFAULT_NAME){}
+HumanB::HumanB( void ) : _name(DEFAULT_NAME), _weapon(DEFAULT_WEAPON) {}
 
-Zombie::Zombie( std::string name ) {
+HumanB::HumanB( std::string name ) {
 	this->_name = name;
 }
 
-Zombie::~Zombie() {
-	std::cout << this->_name << " was destroyed!" << std::endl;
+HumanB::~HumanB( void ) {}
+
+void	HumanB::attack( void ) {
+	std::cout << this->_name << " attacks with their " 
+		<< this->_weapon->getType() << std::endl;
 }
 
-void Zombie::announce( void ) {
-	std::cout << this->_name << ": " << "BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-Zombie* newZombie( std::string name ) {
-	return new Zombie(name);
-}
-
-void randomChump( std::string name ) {
-	Zombie tempZombie(name);
-	tempZombie.announce();
+void	HumanB::setWeapon( Weapon *weapon ) {
+	this->_weapon = weapon;
 }

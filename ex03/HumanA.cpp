@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/29 15:42:09 by anarama           #+#    #+#             */
-/*   Updated: 2024/09/29 19:30:16 by anarama          ###   ########.fr       */
+/*   Created: 2024/09/29 18:56:54 by anarama           #+#    #+#             */
+/*   Updated: 2024/09/29 19:39:27 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include <iostream>
 
-# include <string>
+#include "HumanA.hpp"
 
-# define DEFAULT_NAME "name"
+HumanA::HumanA( std::string name, Weapon &weapon ) : _weapon(weapon), _name(name) {}
 
-class Zombie {
-	private:
-		std::string _name;
-	
-	public:
-		Zombie( void );
-		Zombie( std::string name) ;
-		~Zombie( void );
+HumanA::~HumanA( void ) {}
 
-		void announce( void );
-};
+void	HumanA::attack( void ) {
+	std::cout << this->_name << " attacks with their " 
+		<< this->_weapon.getType() << std::endl;
+}
 
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );
-
-#endif // ZOMBIE_HPP
+void	HumanA::setWeapon( Weapon &weapon ) {
+	this->_weapon = weapon;
+}
