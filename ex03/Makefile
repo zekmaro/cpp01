@@ -6,7 +6,7 @@
 #    By: anarama <anarama@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/29 18:56:31 by anarama           #+#    #+#              #
-#    Updated: 2024/09/29 19:42:45 by anarama          ###   ########.fr        #
+#    Updated: 2024/09/30 15:59:06 by anarama          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC		:= c++
 
 NAME	:= weapon
 
-CFALGS	:= -Wall -Wextra -Werror -std=c++98
+CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 OBJDIR	:= obj
 

@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:40:01 by anarama           #+#    #+#             */
-/*   Updated: 2024/09/29 19:30:04 by anarama          ###   ########.fr       */
+/*   Updated: 2024/09/30 16:07:31 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@
 
 Zombie::Zombie() : _name(DEFAULT_NAME){}
 
-Zombie::Zombie( std::string name ) {
-	this->_name = name;
-}
+Zombie::Zombie( std::string name ) : _name(name) {}
 
 Zombie::~Zombie() {
 	std::cout << this->_name << " was destroyed!" << std::endl;

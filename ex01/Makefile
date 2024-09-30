@@ -6,7 +6,7 @@
 #    By: anarama <anarama@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/29 17:10:11 by anarama           #+#    #+#              #
-#    Updated: 2024/09/29 17:10:18 by anarama          ###   ########.fr        #
+#    Updated: 2024/09/30 15:58:58 by anarama          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC		:= c++
 
 NAME	:= moar
 
-CFALGS	:= -Wall -Wextra -Werror -std=c++98
+CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 OBJDIR	:= obj
 

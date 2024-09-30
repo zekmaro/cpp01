@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 18:55:28 by anarama           #+#    #+#             */
-/*   Updated: 2024/09/29 19:40:37 by anarama          ###   ########.fr       */
+/*   Updated: 2024/09/30 17:42:20 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "Weapon.hpp"
 
-# define DEFAULT_WEAPON nullptr
+# define DEFAULT_WEAPON NULL
 # define DEFAULT_NAME "default"
 
 class HumanB {

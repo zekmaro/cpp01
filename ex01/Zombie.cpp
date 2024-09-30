@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 17:11:08 by anarama           #+#    #+#             */
-/*   Updated: 2024/09/29 19:30:27 by anarama          ###   ########.fr       */
+/*   Updated: 2024/09/30 17:40:20 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,30 @@
 
 #include "Zombie.hpp"
 
-Zombie::Zombie() : _name(DEFAULT_NAME){}
+Zombie::Zombie() : _name(DEFAULT_NAME) {}
 
-Zombie::Zombie( std::string name ) {
-	this->_name = name;
-}
+Zombie::Zombie( std::string name ) : _name(name) {}
 
 Zombie::~Zombie() {
 	std::cout << this->_name << " was destroyed!" << std::endl;
 }
 
+void Zombie::announce( void ) {
+	std::cout << this->_name << ": " << "BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void Zombie::setName( std::string name ) {
+	this->_name = name;
+}
+
 Zombie* zombieHorde( int N, std::string name ) {
 	if (N <= 0) {
 		std::cout << "Incorrect zombie amount!" << std::endl;
-		return nullptr;
+		return NULL;
 	}
 	Zombie* horde = new Zombie[N];
 	for (int i = 0; i < N; i++) {
-		horde[i] = Zombie(name);
+		horde[i].setName(name);
 	}
 	return horde;
 }
