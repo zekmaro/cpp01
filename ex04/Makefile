@@ -6,7 +6,7 @@
 #    By: anarama <anarama@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/29 15:38:54 by anarama           #+#    #+#              #
-#    Updated: 2024/09/30 15:59:10 by anarama          ###   ########.fr        #
+#    Updated: 2024/10/03 16:30:39 by anarama          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,6 @@ CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 OBJDIR	:= obj
 
-HEADERS	:=	header.hpp
-
 SRC		:=	main.cpp
 
 OBJ		:= $(SRC:%.cpp=$(OBJDIR)/%.o)
@@ -28,7 +26,7 @@ $(shell mkdir -p $(OBJDIR))
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(HEADERS)
+$(NAME): $(OBJ)
 	$(CC) $(OBJ) $(CFLAGS) -o $(NAME)
 
 clean:

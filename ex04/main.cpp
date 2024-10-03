@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 19:44:42 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/03 13:23:45 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/03 16:39:47 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,31 @@ std::string getUpdatedLine(std::string oldLine, std::string pattern, std::string
 		temp_copy =  oldLine.substr(current_copy_start_index, pattern_start_index);
 		newLine += temp_copy;
 		newLine += replace;
-		current_copy_start_index = pattern_start_index + replace.length();
+		if (!replace.empty()) {
+			current_copy_start_index = pattern_start_index + replace.length();
+		} else {
+			current_copy_start_index = pattern_start_index + pattern.length();
+		}
 	}
 	newLine += oldLine.substr(current_copy_start_index);
 	return newLine;
 }
 
-int main(int argc, char **argv) {
+bool isValidInput(int argc, char **argv) {
 	if (argc != 4) {
 		std::cerr << "Wrong amount of arguments" << std::endl;
-		return 1;
+		return false;
 	}
 	if (!argv[1] || !argv[2] || !argv[3]
 		|| !argv[2][0]) {
 		std::cerr << "Incorrect arguments!" << std::endl;
+		return false;
+	}
+	return true;
+}
+
+int main(int argc, char **argv) {
+	if (!isValidInput(argc, argv)) {
 		return 1;
 	}
 	std::ifstream inputFile(argv[1]);
@@ -56,7 +67,6 @@ int main(int argc, char **argv) {
 	// if (argv[2] == argv[3]) { add logic
 		
 	// }
-	// create output stream
 	std::string line;
 	while (std::getline(inputFile, line)) {
 		std::string modifiedLine = getUpdatedLine(line, argv[2], argv[3]);
