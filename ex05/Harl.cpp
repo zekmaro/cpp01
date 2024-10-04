@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 16:45:09 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/03 17:25:41 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/04 10:51:57 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ Harl::Harl( void ) {
 	this->_ptr_arr[2] = &Harl::warning;
 	this->_ptr_arr[3] = &Harl::error;
 }
+
+Harl::~Harl( void ) {}
 
 void Harl::debug( void ) {
 	std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. I really do!" << std::endl;
@@ -50,5 +52,3 @@ void Harl::complain( std::string level ) {
 		}
 	}
 }
-
-Harl::~Harl( void ) {}

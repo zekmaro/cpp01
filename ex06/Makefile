@@ -6,13 +6,13 @@
 #    By: anarama <anarama@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/03 16:43:56 by anarama           #+#    #+#              #
-#    Updated: 2024/10/03 17:27:19 by anarama          ###   ########.fr        #
+#    Updated: 2024/10/04 10:57:32 by anarama          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		:= c++
 
-NAME	:= harl
+NAME	:= harlFilter
 
 CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
