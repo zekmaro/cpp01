@@ -6,11 +6,14 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 16:45:12 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/04 10:47:11 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/04 11:01:48 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include <string>
+
 
 class Harl {
 	private:
