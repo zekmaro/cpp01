@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/29 15:42:09 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/04 11:57:53 by anarama          ###   ########.fr       */
+/*   Created: 2024/10/04 11:55:53 by anarama           #+#    #+#             */
+/*   Updated: 2024/10/04 11:56:47 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include <string>
 
-# include <string>
+#include "Zombie.hpp"
 
-# define DEFAULT_NAME "name"
-
-class Zombie {
-	private:
-		std::string _name;
-	
-	public:
-		Zombie( void );
-		Zombie( std::string name) ;
-		~Zombie( void );
-
-		void announce( void );
-};
-
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );
-
-#endif // ZOMBIE_HPP
+Zombie* newZombie( std::string name ) {
+	return new Zombie(name);
+}

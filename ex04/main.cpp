@@ -6,12 +6,13 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 19:44:42 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/03 16:42:51 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/04 13:14:20 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fstream>
 #include <iostream>
+#include <ostream>
 #include <string>
 
 std::string getUpdatedLine(std::string oldLine, std::string pattern, std::string replace) {
@@ -21,11 +22,11 @@ std::string getUpdatedLine(std::string oldLine, std::string pattern, std::string
 	std::size_t current_copy_start_index = 0;
 
 	while ((pattern_start_index = oldLine.find(pattern, current_copy_start_index)) != std::string::npos) {
-		temp_copy =  oldLine.substr(current_copy_start_index, pattern_start_index);
+		temp_copy =  oldLine.substr(current_copy_start_index, pattern_start_index - current_copy_start_index);
 		newLine += temp_copy;
 		newLine += replace;
-		if (!replace.empty()) {
-			current_copy_start_index = pattern_start_index + replace.length();
+		if (!replace.empty() && replace.length() < pattern.length()) {
+			current_copy_start_index = pattern_start_index + replace.length() + 1;
 		} else {
 			current_copy_start_index = pattern_start_index + pattern.length();
 		}

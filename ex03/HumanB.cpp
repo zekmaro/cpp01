@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 18:57:04 by anarama           #+#    #+#             */
-/*   Updated: 2024/09/29 19:40:32 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/04 12:19:12 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 #include "HumanB.hpp"
 
-HumanB::HumanB( void ) : _name(DEFAULT_NAME), _weapon(DEFAULT_WEAPON) {}
+HumanB::HumanB( void ) : _weapon(DEFAULT_WEAPON), _name(DEFAULT_NAME) {}
 
-HumanB::HumanB( std::string name ) {
-	this->_name = name;
-}
+HumanB::HumanB( std::string name ) : _name(name) {}
 
 HumanB::~HumanB( void ) {}
 
